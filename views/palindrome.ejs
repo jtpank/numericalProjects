@@ -1,0 +1,32 @@
+<%- include('includes/header')%>
+
+<div class="container">
+    <h1 class="display-4 text-center py-1">Check if String is Palindrome</h1>
+    
+    <div>
+      <form action="/" method="GET">
+      <button class="btn btn-primary">Back to Home</button>
+      </form>
+    </div>
+
+    <div class="jumbotron p-3 shadow-sm">
+      <form action="/palindrome" method="POST">
+        <div class="d-flex align-items-center">
+            <label for="inputString">Input String:</label>
+            <input autocomplete="off" name="inputString" class="form-control mr-3" type="text" style="flex: 1;">
+            <button class="btn btn-primary">Compute</button>
+        </div>
+      </form>
+
+      <div class="container">
+        <% if (result) { %>
+          <div> Output:  <%= result%></div>
+        <% } else {%>
+            <div> Output:  undetermined</div>
+        <% } %>
+      </div>
+    </div>
+    
+   
+    
+  </div>
